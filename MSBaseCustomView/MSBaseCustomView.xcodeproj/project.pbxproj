@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6620C0A1CBE466600A678C4 /* MSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6620C091CBE466600A678C4 /* MSSliderView.m */; };
+		F6620C0C1CBE467800A678C4 /* MSSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6620C0B1CBE467800A678C4 /* MSSliderView.xib */; };
+		F6620C101CBE478100A678C4 /* MSSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */; };
+		F6620C111CBE478100A678C4 /* MSSliderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */; };
 		F6B50B371CBAEA4200D49229 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B361CBAEA4200D49229 /* main.m */; };
 		F6B50B3A1CBAEA4200D49229 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B391CBAEA4200D49229 /* AppDelegate.m */; };
 		F6B50B3D1CBAEA4200D49229 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B3C1CBAEA4200D49229 /* ViewController.m */; };
 		F6B50B401CBAEA4200D49229 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B3E1CBAEA4200D49229 /* Main.storyboard */; };
 		F6B50B421CBAEA4200D49229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B411CBAEA4200D49229 /* Assets.xcassets */; };
 		F6B50B451CBAEA4200D49229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B431CBAEA4200D49229 /* LaunchScreen.storyboard */; };
-		F6B50B511CBAEA5A00D49229 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B4D1CBAEA5A00D49229 /* CustomView.m */; };
-		F6B50B521CBAEA5A00D49229 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B4E1CBAEA5A00D49229 /* CustomView.xib */; };
 		F6B50B531CBAEA5A00D49229 /* MSBaseCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B501CBAEA5A00D49229 /* MSBaseCustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6620C081CBE466600A678C4 /* MSSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderView.h; sourceTree = "<group>"; };
+		F6620C091CBE466600A678C4 /* MSSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderView.m; sourceTree = "<group>"; };
+		F6620C0B1CBE467800A678C4 /* MSSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSliderView.xib; sourceTree = "<group>"; };
+		F6620C0D1CBE478100A678C4 /* MSSliderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderViewCell.h; sourceTree = "<group>"; };
+		F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderViewCell.m; sourceTree = "<group>"; };
+		F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSliderViewCell.xib; sourceTree = "<group>"; };
 		F6B50B321CBAEA4200D49229 /* MSBaseCustomView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSBaseCustomView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B50B361CBAEA4200D49229 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6B50B381CBAEA4200D49229 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,9 +37,6 @@
 		F6B50B411CBAEA4200D49229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6B50B441CBAEA4200D49229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6B50B461CBAEA4200D49229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6B50B4C1CBAEA5A00D49229 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
-		F6B50B4D1CBAEA5A00D49229 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
-		F6B50B4E1CBAEA5A00D49229 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		F6B50B4F1CBAEA5A00D49229 /* MSBaseCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBaseCustomView.h; sourceTree = "<group>"; };
 		F6B50B501CBAEA5A00D49229 /* MSBaseCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBaseCustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,14 +73,17 @@
 			children = (
 				F6B50B4F1CBAEA5A00D49229 /* MSBaseCustomView.h */,
 				F6B50B501CBAEA5A00D49229 /* MSBaseCustomView.m */,
-				F6B50B4C1CBAEA5A00D49229 /* CustomView.h */,
-				F6B50B4D1CBAEA5A00D49229 /* CustomView.m */,
-				F6B50B4E1CBAEA5A00D49229 /* CustomView.xib */,
 				F6B50B381CBAEA4200D49229 /* AppDelegate.h */,
 				F6B50B391CBAEA4200D49229 /* AppDelegate.m */,
 				F6B50B3B1CBAEA4200D49229 /* ViewController.h */,
 				F6B50B3C1CBAEA4200D49229 /* ViewController.m */,
 				F6B50B3E1CBAEA4200D49229 /* Main.storyboard */,
+				F6620C081CBE466600A678C4 /* MSSliderView.h */,
+				F6620C091CBE466600A678C4 /* MSSliderView.m */,
+				F6620C0B1CBE467800A678C4 /* MSSliderView.xib */,
+				F6620C0D1CBE478100A678C4 /* MSSliderViewCell.h */,
+				F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */,
+				F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */,
 				F6B50B411CBAEA4200D49229 /* Assets.xcassets */,
 				F6B50B431CBAEA4200D49229 /* LaunchScreen.storyboard */,
 				F6B50B461CBAEA4200D49229 /* Info.plist */,
@@ -150,8 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B50B451CBAEA4200D49229 /* LaunchScreen.storyboard in Resources */,
-				F6B50B521CBAEA5A00D49229 /* CustomView.xib in Resources */,
+				F6620C0C1CBE467800A678C4 /* MSSliderView.xib in Resources */,
 				F6B50B421CBAEA4200D49229 /* Assets.xcassets in Resources */,
+				F6620C111CBE478100A678C4 /* MSSliderViewCell.xib in Resources */,
 				F6B50B401CBAEA4200D49229 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +174,9 @@
 			files = (
 				F6B50B3D1CBAEA4200D49229 /* ViewController.m in Sources */,
 				F6B50B531CBAEA5A00D49229 /* MSBaseCustomView.m in Sources */,
-				F6B50B511CBAEA5A00D49229 /* CustomView.m in Sources */,
+				F6620C101CBE478100A678C4 /* MSSliderViewCell.m in Sources */,
 				F6B50B3A1CBAEA4200D49229 /* AppDelegate.m in Sources */,
+				F6620C0A1CBE466600A678C4 /* MSSliderView.m in Sources */,
 				F6B50B371CBAEA4200D49229 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +324,7 @@
 				F6B50B4B1CBAEA4200D49229 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
