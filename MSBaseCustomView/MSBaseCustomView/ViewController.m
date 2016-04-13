@@ -42,7 +42,6 @@
         [sliderView selectItemAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
     });
     
-    
     _sliderView = sliderView;
 }
 
