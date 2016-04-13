@@ -11,7 +11,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet MSSliderView *sliderView;
 
 @end
@@ -21,16 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    
-    NSMutableAttributedString *attirbuteString = [[NSMutableAttributedString alloc] initWithString:@"abc"];
-    [attirbuteString addAttributes:@{
-                                     NSForegroundColorAttributeName: [UIColor redColor],
-                                     NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
-                                     NSUnderlineColorAttributeName: [UIColor blueColor]
-                                     
-                                     } range:NSMakeRange(0, 3)];
-    [self.button setAttributedTitle:attirbuteString forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
