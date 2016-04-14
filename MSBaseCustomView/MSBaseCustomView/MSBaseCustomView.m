@@ -27,5 +27,17 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        NSLog(@"%@", self.class);
+        UIView *view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self.class) owner:self options:nil].firstObject;
+        [self addSubview:view];
+        self.frame = frame;
+        view.frame = self.bounds;
+    }
+    return self;
+}
+
 
 @end

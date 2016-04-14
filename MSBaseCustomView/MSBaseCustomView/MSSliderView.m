@@ -17,11 +17,6 @@
 
 @implementation MSSliderView
 
-- (void)awakeFromNib
-{
-    [self setupDefaultValue];
-}
-
 - (void)setupDefaultValue
 {
     if (_scrollPosition == UICollectionViewScrollPositionNone) {
@@ -85,9 +80,12 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self layoutIfNeeded];
+    
     NSString *title = [_datasource objectAtIndex:indexPath.row];
 
     CGFloat width = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesFontLeading| NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:_fontSize]} context:nil].size.width;
+
     return CGSizeMake(width + 16.0f, self.bounds.size.height);
 }
 
@@ -105,11 +103,14 @@
 
 - (void)setCollectionView:(UICollectionView *)collectionView
 {
+    [self setupDefaultValue];
+    
     collectionView.delegate = self;
     collectionView.dataSource = self;
     
     collectionView.showsVerticalScrollIndicator = NO;
     collectionView.showsHorizontalScrollIndicator = NO;
+
     
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MSSliderViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MSSliderViewCell class])];
     collectionView.backgroundView = nil;
@@ -144,12 +145,5 @@
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
