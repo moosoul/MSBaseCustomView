@@ -42,6 +42,10 @@
     if (_underlineHeight == 0.0f) {
         _underlineHeight = 2.0f;
     }
+    
+    if (_margin == 0.0f) {
+        _margin = 8.0f;
+    }
 
     
     if (!_datasource) {
@@ -86,8 +90,14 @@
 
     CGFloat width = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesFontLeading| NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:_fontSize]} context:nil].size.width;
 
-    return CGSizeMake(width + 16.0f, self.bounds.size.height);
+    return CGSizeMake(width+8.0f, self.bounds.size.height);
 }
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return (_margin-8.0f);
+}
+
 
 #pragma mark - custom delegate
 - (void)ms_sliderViewCell:(MSSliderViewCell *)cell didSelectedTitleButton:(UIButton *)sender

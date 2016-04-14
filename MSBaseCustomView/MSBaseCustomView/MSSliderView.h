@@ -58,6 +58,9 @@
 //!@brief 下划线的高度 默认为 2.0f
 @property (nonatomic, assign) CGFloat underlineHeight;
 
+//!@brief cell间距 默认为8.0f
+@property (nonatomic, assign) CGFloat margin;
+
 @property (nonatomic, weak) id<MSSliderViewDelegate> delegate;
 
 /**

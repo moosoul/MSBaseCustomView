@@ -18,6 +18,7 @@
 		F6B50B421CBAEA4200D49229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B411CBAEA4200D49229 /* Assets.xcassets */; };
 		F6B50B451CBAEA4200D49229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B50B431CBAEA4200D49229 /* LaunchScreen.storyboard */; };
 		F6B50B531CBAEA5A00D49229 /* MSBaseCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B501CBAEA5A00D49229 /* MSBaseCustomView.m */; };
+		F6CABF5F1CBF8CEE001E5181 /* MSSliderViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6CABF5E1CBF8CEE001E5181 /* MSSliderViewCellButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		F6B50B461CBAEA4200D49229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6B50B4F1CBAEA5A00D49229 /* MSBaseCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBaseCustomView.h; sourceTree = "<group>"; };
 		F6B50B501CBAEA5A00D49229 /* MSBaseCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBaseCustomView.m; sourceTree = "<group>"; };
+		F6CABF5D1CBF8CEE001E5181 /* MSSliderViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderViewCellButton.h; sourceTree = "<group>"; };
+		F6CABF5E1CBF8CEE001E5181 /* MSSliderViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderViewCellButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				F6620C0D1CBE478100A678C4 /* MSSliderViewCell.h */,
 				F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */,
 				F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */,
+				F6CABF5D1CBF8CEE001E5181 /* MSSliderViewCellButton.h */,
+				F6CABF5E1CBF8CEE001E5181 /* MSSliderViewCellButton.m */,
 				F6B50B411CBAEA4200D49229 /* Assets.xcassets */,
 				F6B50B431CBAEA4200D49229 /* LaunchScreen.storyboard */,
 				F6B50B461CBAEA4200D49229 /* Info.plist */,
@@ -174,6 +179,7 @@
 			files = (
 				F6B50B3D1CBAEA4200D49229 /* ViewController.m in Sources */,
 				F6B50B531CBAEA5A00D49229 /* MSBaseCustomView.m in Sources */,
+				F6CABF5F1CBF8CEE001E5181 /* MSSliderViewCellButton.m in Sources */,
 				F6620C101CBE478100A678C4 /* MSSliderViewCell.m in Sources */,
 				F6B50B3A1CBAEA4200D49229 /* AppDelegate.m in Sources */,
 				F6620C0A1CBE466600A678C4 /* MSSliderView.m in Sources */,
