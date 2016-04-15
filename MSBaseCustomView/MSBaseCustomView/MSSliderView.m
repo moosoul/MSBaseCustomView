@@ -17,6 +17,34 @@
 
 @implementation MSSliderView
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self addChildViews];
+    }
+    return self;
+}
+
+
+- (void)addChildViews
+{
+    [self addSubview:self.collectionView];
+}
+
+- (void)layoutSubviews
+{
+    self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.collectionView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
+    
+    [self setupDefaultValue];
+    
+    [super layoutSubviews];
+}
+
 - (void)setupDefaultValue
 {
     if (_scrollPosition == UICollectionViewScrollPositionNone) {
@@ -47,7 +75,6 @@
         _margin = 8.0f;
     }
 
-    
     if (!_datasource) {
         _datasource = [NSMutableArray array];
     }
@@ -89,13 +116,28 @@
     NSString *title = [_datasource objectAtIndex:indexPath.row];
 
     CGFloat width = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, self.bounds.size.height) options:NSStringDrawingUsesFontLeading| NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:_fontSize]} context:nil].size.width;
+    if (!_autoWidth) {
+        width = self.frame.size.width / self.datasource.count;
+    } else {
+        width += 8.0f;
+    }
 
-    return CGSizeMake(width+8.0f, self.bounds.size.height);
+    return CGSizeMake(width, self.frame.size.height);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0.0f, 8.0f, 0.0f, 8.0f);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return (_margin-8.0f);
+    return (_margin - 8.0f)*0.5;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return (_margin - 8.0f)*0.5;
 }
 
 
@@ -109,24 +151,6 @@
     }
     
     [self selectItemAtIndexPath:selectIndexPath deSelectItemAtIndexPath:deSelectIndexPath animated:_scrollAnimated];
-}
-
-- (void)setCollectionView:(UICollectionView *)collectionView
-{
-    [self setupDefaultValue];
-    
-    collectionView.delegate = self;
-    collectionView.dataSource = self;
-    
-    collectionView.showsVerticalScrollIndicator = NO;
-    collectionView.showsHorizontalScrollIndicator = NO;
-
-    
-    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MSSliderViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MSSliderViewCell class])];
-    collectionView.backgroundView = nil;
-    collectionView.backgroundColor = [UIColor clearColor];
-    
-    _collectionView = collectionView;
 }
 
 - (void)selectItemAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated
@@ -154,6 +178,30 @@
     }
 }
 
+#pragma mark - setter and getter
+- (UICollectionView *)collectionView
+{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 1, 1) collectionViewLayout:layout];
+        
+        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MSSliderViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([MSSliderViewCell class])];
+        
+        _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        
+        _collectionView.backgroundView = nil;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        
+        
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        
+    }
+    return _collectionView;
+}
 
 
 @end

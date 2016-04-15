@@ -6,7 +6,7 @@
 //  Copyright © 2016 moosoul. All rights reserved.
 //
 
-#import "MSBaseCustomView.h"
+#import <UIKit/UIKit.h>
 @class MSSliderView;
 
 @protocol MSSliderViewDelegate <NSObject>
@@ -15,9 +15,10 @@
 
 @end
 
-@interface MSSliderView : MSBaseCustomView
+@interface MSSliderView : UIView
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) UICollectionView *collectionView;
+
 @property (nonatomic, strong) NSMutableArray *datasource;
 
 //!@brief 默认选中项的index
@@ -60,6 +61,9 @@
 
 //!@brief cell间距 默认为8.0f
 @property (nonatomic, assign) CGFloat margin;
+
+//!@breif cell的title是否为自适应宽度 默认为No
+@property (nonatomic, assign) BOOL autoWidth;
 
 @property (nonatomic, weak) id<MSSliderViewDelegate> delegate;
 

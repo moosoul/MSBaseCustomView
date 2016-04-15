@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "MSSliderView.h"
 
+
+#import "CustomView.h"
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet MSSliderView *sliderView;
@@ -19,6 +22,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    CustomView *customView1 = [[CustomView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)];
+//    [self.view addSubview:customView1];
+//    
+//    
+//    NSLog(@"--------------------------------\n--------------------------------");
+//    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        CustomView *customView2 = [[CustomView alloc] init];
+//        [self.view addSubview:customView2];
+//        customView2.frame = CGRectMake(0, 200, 320, 100);
+//    });
+    
+
+    
     
 //    MSSliderView *sliderView = [[MSSliderView alloc] initWithFrame:CGRectMake(0, 300, 320, 64)];
 //    sliderView.fontSize = 15.0f;
@@ -48,15 +66,15 @@
     sliderView.scrollAnimated = YES;
     sliderView.showUnderline = YES;
     sliderView.underlineHeight = 3.0f;
+    sliderView.autoWidth = YES;
     sliderView.margin = 32.0f;
-    sliderView.datasource = [NSMutableArray arrayWithArray:@[@"AAAAAAAAAA", @"VCDADSDASD", @"AA", @"CCCCS", @"CCCCC", @"CCCCC", @"CCCCC", @"CCCCC"]];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [sliderView selectItemAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
-    });
+    
+    sliderView.datasource = [NSMutableArray arrayWithArray:@[@"AAAAAAAAAA", @"VCDADSDASD", @"AA", @"CCCCS", @"CCCCC", @"CCCCC", @"CCCCC", @"CCCCC"]];
     
     _sliderView = sliderView;
 }
+
 
 
 @end

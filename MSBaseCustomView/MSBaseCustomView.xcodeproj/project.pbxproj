@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F6620C0A1CBE466600A678C4 /* MSSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6620C091CBE466600A678C4 /* MSSliderView.m */; };
-		F6620C0C1CBE467800A678C4 /* MSSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6620C0B1CBE467800A678C4 /* MSSliderView.xib */; };
 		F6620C101CBE478100A678C4 /* MSSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */; };
 		F6620C111CBE478100A678C4 /* MSSliderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */; };
 		F6B50B371CBAEA4200D49229 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B50B361CBAEA4200D49229 /* main.m */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		F6620C081CBE466600A678C4 /* MSSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderView.h; sourceTree = "<group>"; };
 		F6620C091CBE466600A678C4 /* MSSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderView.m; sourceTree = "<group>"; };
-		F6620C0B1CBE467800A678C4 /* MSSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSliderView.xib; sourceTree = "<group>"; };
 		F6620C0D1CBE478100A678C4 /* MSSliderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSliderViewCell.h; sourceTree = "<group>"; };
 		F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSliderViewCell.m; sourceTree = "<group>"; };
 		F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSSliderViewCell.xib; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				F6B50B3E1CBAEA4200D49229 /* Main.storyboard */,
 				F6620C081CBE466600A678C4 /* MSSliderView.h */,
 				F6620C091CBE466600A678C4 /* MSSliderView.m */,
-				F6620C0B1CBE467800A678C4 /* MSSliderView.xib */,
 				F6620C0D1CBE478100A678C4 /* MSSliderViewCell.h */,
 				F6620C0E1CBE478100A678C4 /* MSSliderViewCell.m */,
 				F6620C0F1CBE478100A678C4 /* MSSliderViewCell.xib */,
@@ -163,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B50B451CBAEA4200D49229 /* LaunchScreen.storyboard in Resources */,
-				F6620C0C1CBE467800A678C4 /* MSSliderView.xib in Resources */,
 				F6B50B421CBAEA4200D49229 /* Assets.xcassets in Resources */,
 				F6620C111CBE478100A678C4 /* MSSliderViewCell.xib in Resources */,
 				F6B50B401CBAEA4200D49229 /* Main.storyboard in Resources */,
